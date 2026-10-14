@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Consultez les informations du produit et passez votre demande de commande auprès d'Info Essoussi au Maroc.">
+  <meta name="theme-color" content="#123b67">
+  <title>Info Essoussi | Produit</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="style.css">
+  <script src="product.js" defer></script>
+</head>
+<body class="product-page-body">
+  <div class="notice-bar">
+    <p data-fr="Livraison gratuite au Maroc · Paiement à la livraison" data-ar="توصيل مجاني داخل المغرب · الدفع عند الاستلام">Livraison gratuite au Maroc · Paiement à la livraison</p>
+    <button class="language-switch" id="product-language-switch" type="button" aria-label="Changer la langue" lang="ar">العربية</button>
+  </div>
+
+  <header class="product-site-header">
+    <a class="brand" href="index.html#accueil" aria-label="Info Essoussi, accueil">
+      <span class="brand-mark" aria-hidden="true">IE</span>
+      <span class="brand-name">Info <strong>Essoussi</strong><small data-fr="BOUTIQUE EN LIGNE" data-ar="متجر إلكتروني">BOUTIQUE EN LIGNE</small></span>
+    </a>
+    <a class="product-back" href="index.html#catalogue"><span aria-hidden="true">←</span><span data-fr="Retour aux produits" data-ar="العودة إلى المنتجات">Retour aux produits</span></a>
+  </header>
+
+  <main class="product-page-main" id="product-content" hidden>
+    <nav class="product-breadcrumb" aria-label="Fil d'Ariane">
+      <a href="index.html#catalogue" data-fr="Produits" data-ar="المنتجات">Produits</a>
+      <span aria-hidden="true">/</span>
+      <span id="product-breadcrumb-name"></span>
+    </nav>
+
+    <section class="product-detail-layout" aria-labelledby="page-product-name">
+      <div class="product-detail-gallery">
+        <div class="product-detail-visual"><img id="page-product-image" src="" alt="" width="900" height="760"><span class="product-image-placeholder" id="product-image-placeholder" data-fr="Image non disponible" data-ar="لا توجد صورة للعرض" hidden>Image non disponible</span></div>
+        <div class="product-gallery-thumbnails" id="product-gallery-thumbnails" role="group" aria-label="Images du produit"></div>
+      </div>
+      <div class="product-detail-copy">
+        <p class="product-detail-category" id="page-product-category"></p>
+        <h1 id="page-product-name"></h1>
+        <p class="product-detail-description" id="page-product-description"></p>
+        <div class="product-detail-price"><span data-fr="Prix" data-ar="الثمن">Prix</span><strong id="page-product-price"></strong></div>
+        <div class="order-benefits"><span data-fr="Livraison gratuite" data-ar="توصيل مجاني">Livraison gratuite</span><span data-fr="Paiement à la livraison" data-ar="الدفع عند الاستلام">Paiement à la livraison</span></div>
+        <button class="primary-link product-page-order" id="show-order" type="button"><span data-fr="Commander ce produit" data-ar="اطلب هذا المنتج">Commander ce produit</span><span aria-hidden="true">↘</span></button>
+      </div>
+    </section>
+
+    <section class="order-checkout" id="checkout-section" aria-labelledby="checkout-title" hidden>
+      <div class="checkout-heading">
+        <p class="eyebrow" data-fr="DEMANDE DE COMMANDE" data-ar="طلب شراء">DEMANDE DE COMMANDE</p>
+        <h2 id="checkout-title" data-fr="Vos coordonnées" data-ar="معلومات التواصل">Vos coordonnées</h2>
+        <p class="checkout-product"><span id="checkout-product-name"></span><strong id="checkout-product-price"></strong></p>
+      </div>
+      <form id="order-form">
+        <div class="order-fields">
+          <label class="order-field"><span data-fr="Prénom" data-ar="الاسم الشخصي">Prénom</span><input id="order-first-name" name="given-name" type="text" autocomplete="given-name" maxlength="60" required></label>
+          <label class="order-field"><span data-fr="Nom" data-ar="النسب">Nom</span><input id="order-last-name" name="family-name" type="text" autocomplete="family-name" maxlength="60" required></label>
+          <label class="order-field"><span data-fr="Téléphone" data-ar="رقم الهاتف">Téléphone</span><input id="order-phone" name="tel" type="tel" autocomplete="tel" minlength="8" maxlength="20" required></label>
+          <label class="order-field"><span data-fr="Ville" data-ar="المدينة">Ville</span><input id="order-city" name="address-level2" type="text" autocomplete="address-level2" maxlength="80" required></label>
+        </div>
+        <p class="order-privacy" data-fr="Vos informations seront ajoutées au message WhatsApp, sans être enregistrées sur ce site." data-ar="ستُضاف معلوماتك إلى رسالة واتساب ولن تُحفظ في هذا الموقع.">Vos informations seront ajoutées au message WhatsApp, sans être enregistrées sur ce site.</p>
+        <button class="primary-link product-page-order" type="submit"><span data-fr="Continuer sur WhatsApp" data-ar="المتابعة عبر واتساب">Continuer sur WhatsApp</span><span aria-hidden="true">↗</span></button>
+      </form>
+    </section>
+  </main>
+
+  <main class="product-not-found" id="product-not-found" hidden>
+    <h1 data-fr="Produit introuvable" data-ar="المنتج غير موجود">Produit introuvable</h1>
+    <p data-fr="Ce produit n'est pas disponible dans le catalogue." data-ar="هذا المنتج غير متوفر في قائمة المنتجات.">Ce produit n'est pas disponible dans le catalogue.</p>
+    <a class="primary-link" href="index.html#catalogue"><span data-fr="Retour aux produits" data-ar="العودة إلى المنتجات">Retour aux produits</span><span aria-hidden="true">↗</span></a>
+  </main>
+
+  <footer class="site-footer"><a class="footer-brand" href="index.html#accueil">Info <strong>Essoussi</strong></a><span data-fr="Boutique en ligne · Maroc" data-ar="متجر إلكتروني · المغرب">Boutique en ligne · Maroc</span><span>© <span id="current-year">2026</span> Info Essoussi</span></footer>
+  <a class="whatsapp-float" href="https://wa.me/212665946134" target="_blank" rel="noopener noreferrer" aria-label="Contacter Info Essoussi sur WhatsApp" title="WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20.2 11.6a8.2 8.2 0 0 1-12.1 7.2L3 20l1.3-4.8a8.2 8.2 0 1 1 15.9-3.6Z"></path>
+      <path d="M8.1 7.7c.3-.4.6-.4.9-.3l1 .5c.2.1.3.4.2.6l-.5 1c.5.9 1.2 1.6 2.1 2.1l1-.5c.2-.1.5 0 .6.2l.5 1c.1.3.1.6-.3.9-.5.4-1.1.6-1.6.5-2.5-.6-4.4-2.5-5-5-.1-.4.1-.8.5-1Z"></path>
+    </svg>
+  </a>
+</body>
+</html>

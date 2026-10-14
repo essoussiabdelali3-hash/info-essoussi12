@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#f4f6f8">
+  <title>Administration | Info Essoussi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dashboard.css">
+  <script src="dashboard.js" defer></script>
+</head>
+<body>
+  <div class="dashboard-shell">
+    <aside class="sidebar" aria-label="Navigation d'administration">
+      <a class="brand" href="index.html" aria-label="Retour à la boutique Info Essoussi">
+        <span class="brand-mark">IE</span>
+        <span class="brand-copy">Info <strong>Essoussi</strong><small>ESPACE ADMIN</small></span>
+      </a>
+
+      <p class="nav-caption">GESTION</p>
+      <nav class="side-nav">
+        <a class="nav-item" href="index.html"><span class="nav-icon" aria-hidden="true">⌂</span>Boutique<span class="nav-arrow" aria-hidden="true">↗</span></a>
+        <a class="nav-item is-current" href="#products" aria-current="page"><span class="nav-icon" aria-hidden="true">▦</span>Produits<span class="nav-count" id="nav-product-count">4</span></a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="demo-callout"><span class="status-dot"></span><div><strong>Mode démonstration</strong><span>Données enregistrées sur cet appareil</span></div></div>
+        <a class="store-link" href="index.html"><span aria-hidden="true">←</span> Retour à la boutique</a>
+      </div>
+    </aside>
+
+    <main class="main-area" id="products">
+      <header class="topbar">
+        <div class="breadcrumb"><span>Administration</span><span aria-hidden="true">/</span><strong>Produits</strong></div>
+        <span class="account-chip"><span class="account-avatar">IE</span><span>Gestionnaire<small>Compte local</small></span></span>
+      </header>
+
+      <div class="page-content">
+        <section class="page-heading" aria-labelledby="page-title">
+          <div>
+            <p class="eyebrow">VOTRE BOUTIQUE · MAROC</p>
+            <h1 id="page-title">Produits</h1>
+            <p class="heading-description">Gérez votre catalogue de démonstration.</p>
+          </div>
+          <button class="button button-primary" id="add-product" type="button"><span aria-hidden="true">＋</span>Ajouter un produit</button>
+        </section>
+
+        <section class="summary-grid" aria-label="Résumé du catalogue">
+          <article class="summary-card"><div class="summary-label"><span>Articles au catalogue</span><span class="summary-icon icon-blue" aria-hidden="true">▦</span></div><strong id="total-products">4</strong><small>Produits de démonstration inclus</small></article>
+          <article class="summary-card"><div class="summary-label"><span>Catégories utilisées</span><span class="summary-icon icon-green" aria-hidden="true">⌘</span></div><strong id="total-categories">3</strong><small>Sur 4 catégories disponibles</small></article>
+          <article class="summary-card"><div class="summary-label"><span>Prix renseignés</span><span class="summary-icon icon-amber" aria-hidden="true">DH</span></div><strong id="priced-products">0</strong><small>Les produits démo n'ont pas de prix</small></article>
+        </section>
+
+        <section class="catalog-panel" aria-labelledby="catalog-title">
+          <div class="catalog-heading">
+            <div><h2 id="catalog-title">Tous les produits</h2><p><span id="visible-count">4</span> article(s) dans le catalogue</p></div>
+            <label class="search-field"><span aria-hidden="true">⌕</span><input id="product-search" type="search" placeholder="Rechercher un produit..." aria-label="Rechercher un produit"></label>
+          </div>
+          <div class="filter-row"><label for="category-filter">Catégorie</label><select id="category-filter"><option value="all">Toutes les catégories</option></select><span class="filter-note">Catalogue local · non publié</span></div>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th scope="col">PRODUIT</th><th scope="col">CATÉGORIE</th><th scope="col">PRIX</th><th scope="col">TYPE</th><th scope="col" aria-label="Actions"></th></tr></thead>
+              <tbody id="product-rows"></tbody>
+            </table>
+            <div class="empty-state" id="empty-state" hidden><span class="empty-icon" aria-hidden="true">⌕</span><strong>Aucun produit trouvé</strong><span>Essayez une autre recherche ou catégorie.</span></div>
+          </div>
+          <footer class="table-footer"><span>Exemple d'interface · les données restent dans ce navigateur</span><a href="index.html">Voir la boutique <span aria-hidden="true">↗</span></a></footer>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <dialog class="product-dialog" id="product-dialog" aria-labelledby="dialog-title">
+    <form id="product-form">
+      <div class="dialog-heading"><div><p class="eyebrow">CATALOGUE</p><h2 id="dialog-title">Ajouter un produit</h2></div><button class="icon-button" id="close-dialog" type="button" aria-label="Fermer">×</button></div>
+      <input id="product-id" type="hidden">
+      <label class="form-field">Nom du produit<input id="product-name" name="name" maxlength="90" required placeholder="Ex. Caméra de sécurité"></label>
+      <label class="form-field">Description<textarea id="product-description" name="description" maxlength="500" rows="3" placeholder="Décrivez les caractéristiques du produit"></textarea><span class="field-help">500 caractères maximum</span></label>
+      <label class="form-field">Catégorie<select id="product-category" name="category" required></select></label>
+      <label class="form-field">Prix en DH <span class="optional">facultatif</span><input id="product-price" name="price" type="number" min="0" step="0.01" placeholder="Laisser vide si non défini"></label>
+      <p class="form-note">Le prix reste vide tant qu'il n'a pas été confirmé.</p>
+      <label class="form-field">Images du produit<input id="product-image" name="images" type="file" accept="image/jpeg,image/png,image/webp" multiple><span class="field-help">Jusqu'à 4 images · JPEG, PNG ou WebP · 5 Mo par image</span></label>
+      <div class="image-preview" id="image-preview" hidden><div class="image-preview-grid" id="image-preview-grid"></div></div>
+      <div class="dialog-actions"><button class="button button-quiet" id="cancel-dialog" type="button">Annuler</button><button class="button button-primary" type="submit">Enregistrer</button></div>
+    </form>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Info Essoussi, boutique en ligne mult catégorie pour le Maroc. Découvrez des produits de démonstration et demandez les informations de disponibilité.">
+  <meta name="theme-color" content="#123b67">
+  <title>Info Essoussi | Boutique en ligne au Maroc</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="notice-bar">
+    <p data-fr="Livraison gratuite au Maroc · Paiement à la livraison" data-ar="توصيل مجاني داخل المغرب · الدفع عند الاستلام">Livraison gratuite au Maroc · Paiement à la livraison</p>
+    <button class="language-switch" type="button" aria-label="Changer la langue" lang="ar">العربية</button>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#accueil" aria-label="Info Essoussi, accueil">
+      <span class="brand-mark" aria-hidden="true">IE</span>
+      <span class="brand-name">Info <strong>Essoussi</strong><small data-fr="BOUTIQUE EN LIGNE" data-ar="متجر إلكتروني">BOUTIQUE EN LIGNE</small></span>
+    </a>
+    <label class="search-box">
+      <span class="search-icon" aria-hidden="true">⌕</span>
+      <input id="product-search" type="search" autocomplete="off" placeholder="Rechercher un produit" aria-label="Rechercher un produit" data-placeholder-fr="Rechercher un produit" data-placeholder-ar="ابحث عن منتج">
+      <kbd>Ctrl K</kbd>
+    </label>
+    <a class="header-contact" href="#contact" data-fr="Nous contacter" data-ar="تواصل معنا">Nous contacter <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <nav class="category-nav" aria-label="Catégories de produits">
+    <div class="category-nav-inner" id="category-nav">
+      <button class="category-link is-active" type="button" data-category="all" data-fr="Tout voir" data-ar="عرض الكل">Tout voir</button>
+      <button class="category-link" type="button" data-category="surveillance" data-fr="Électronique & vidéosurveillance" data-ar="الإلكترونيات والمراقبة">Électronique & vidéosurveillance</button>
+      <button class="category-link" type="button" data-category="phones" data-fr="Téléphones & accessoires" data-ar="الهواتف والإكسسوارات">Téléphones & accessoires</button>
+      <button class="category-link" type="button" data-category="tools" data-fr="Outils & équipements" data-ar="الأدوات والمعدات">Outils & équipements</button>
+      <button class="category-link" type="button" data-category="computing" data-fr="Informatique" data-ar="المعلوميات">Informatique</button>
+    </div>
+  </nav>
+
+  <main id="accueil">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span><span data-fr="VOTRE BOUTIQUE, AU MAROC" data-ar="متجركم في المغرب">VOTRE BOUTIQUE, AU MAROC</span></p>
+        <h1 id="hero-title" data-fr="Les bonnes trouvailles, simplement." data-ar="اختيارات مميزة، بكل بساطة.">Les bonnes trouvailles, simplement.</h1>
+        <p class="hero-description" data-fr="Électronique, maison, informatique et bien plus. Parcourez notre sélection et contactez-nous pour confirmer les disponibilités." data-ar="إلكترونيات، منزل، معلوميات والمزيد. اكتشفوا مجموعتنا وتواصلوا معنا لتأكيد التوفر.">Électronique, maison, informatique et bien plus. Parcourez notre sélection et contactez-nous pour confirmer les disponibilités.</p>
+        <a class="primary-link" href="#catalogue"><span data-fr="Explorer la sélection" data-ar="اكتشفوا المنتجات">Explorer la sélection</span><span aria-hidden="true">↘</span></a>
+        <div class="hero-meta"><span class="meta-mark" aria-hidden="true">✳</span><span data-fr="Des produits sélectionnés pour le quotidien" data-ar="منتجات مختارة للاستخدام اليومي">Des produits sélectionnés pour le quotidien</span></div>
+      </div>
+      <div class="hero-visual">
+        <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?auto=format&amp;fit=crop&amp;w=1100&amp;q=82" alt="Sélection d'appareils électroniques sur un bureau" fetchpriority="high" width="1100" height="850">
+        <div class="visual-caption"><span class="caption-dot"></span><span data-fr="SÉLECTION INFO ESSOUSSI" data-ar="اختيارات إنفو السوسي">SÉLECTION INFO ESSOUSSI</span></div>
+        <div class="visual-index">01 <span>/ 04</span></div>
+      </div>
+      <div class="hero-side-label" aria-hidden="true">INFO ESSOUSSI · MAROC</div>
+    </section>
+
+    <section class="catalogue section-wrap" id="catalogue" aria-labelledby="catalogue-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow section-eyebrow" data-fr="À DÉCOUVRIR" data-ar="اكتشفوا">À DÉCOUVRIR</p>
+          <h2 id="catalogue-title" data-fr="La sélection du moment" data-ar="اختياراتنا">La sélection du moment</h2>
+        </div>
+        <p class="demo-note" data-fr="Produits du catalogue · prix indiqués" data-ar="منتجات الكتالوج · الأسعار موضحة">Produits du catalogue · prix indiqués</p>
+      </div>
+
+      <div class="product-grid" id="product-grid">
+        <article class="product-card" data-product-id="demo-camera" data-default-price="550" data-category="surveillance" data-search-fr="caméra de sécurité vidéosurveillance électronique démonstration" data-search-ar="كاميرا مراقبة إلكترونيات تجريبي" data-description-fr="Caméra de surveillance de démonstration. Les caractéristiques techniques sont à confirmer." data-description-ar="كاميرا مراقبة تجريبية. المواصفات التقنية قيد التأكيد.">
+          <div class="product-image image-blue">
+            <a class="product-image-link" data-product-link href="product.html?id=demo-camera&amp;lang=fr" aria-label="Voir les détails de la caméra de sécurité"><img src="https://images.unsplash.com/photo-1557324232-b8917d3c3dcb?auto=format&amp;fit=crop&amp;w=720&amp;q=78" alt="Caméra de surveillance, produit de démonstration" loading="lazy" width="720" height="620"></a>
+            <span class="demo-tag" data-fr="DÉMO" data-ar="تجريبي">DÉMO</span>
+          </div>
+          <div class="product-info"><p class="product-category" data-fr="ÉLECTRONIQUE · DÉMO" data-ar="إلكترونيات · تجريبي">ÉLECTRONIQUE · DÉMO</p><h3 data-fr="Caméra de sécurité" data-ar="كاميرا مراقبة">Caméra de sécurité</h3><div class="product-bottom"><span class="product-price">550 DH</span><a class="product-link product-page-link" href="product.html?id=demo-camera&amp;lang=fr" data-label-fr="Détails" data-label-ar="التفاصيل">Détails <span aria-hidden="true">↗</span></a></div></div>
+        </article>
+
+        <article class="product-card" data-product-id="demo-phone" data-default-price="550" data-category="phones" data-search-fr="téléphone smartphone mobile accessoires démonstration" data-search-ar="هاتف ذكي محمول إكسسوارات تجريبي" data-description-fr="Téléphone mobile de démonstration. Le modèle et ses caractéristiques sont à confirmer." data-description-ar="هاتف محمول تجريبي. الطراز والمواصفات قيد التأكيد.">
+          <div class="product-image image-sand">
+            <a class="product-image-link" data-product-link href="product.html?id=demo-phone&amp;lang=fr" aria-label="Voir les détails du téléphone mobile"><img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&amp;fit=crop&amp;w=720&amp;q=78" alt="Téléphone mobile, produit de démonstration" loading="lazy" width="720" height="620"></a>
+            <span class="demo-tag" data-fr="DÉMO" data-ar="تجريبي">DÉMO</span>
+          </div>
+          <div class="product-info"><p class="product-category" data-fr="TÉLÉPHONES · DÉMO" data-ar="هواتف · تجريبي">TÉLÉPHONES · DÉMO</p><h3 data-fr="Téléphone mobile" data-ar="هاتف محمول">Téléphone mobile</h3><div class="product-bottom"><span class="product-price">550 DH</span><a class="product-link product-page-link" href="product.html?id=demo-phone&amp;lang=fr" data-label-fr="Détails" data-label-ar="التفاصيل">Détails <span aria-hidden="true">↗</span></a></div></div>
+        </article>
+
+        <article class="product-card" data-product-id="demo-laptop" data-default-price="3500" data-category="computing" data-search-fr="informatique ordinateur accessoires technologie démonstration" data-search-ar="معلوميات حاسوب إكسسوارات تقنية تجريبي" data-description-fr="Ordinateur portable de démonstration. Le modèle et la configuration sont à confirmer." data-description-ar="حاسوب محمول تجريبي. الطراز والتكوين قيد التأكيد.">
+          <div class="product-image image-lilac">
+            <a class="product-image-link" data-product-link href="product.html?id=demo-laptop&amp;lang=fr" aria-label="Voir les détails de l'ordinateur portable"><img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&amp;fit=crop&amp;w=720&amp;q=78" alt="Ordinateur portable, produit de démonstration" loading="lazy" width="720" height="620"></a>
+            <span class="demo-tag" data-fr="DÉMO" data-ar="تجريبي">DÉMO</span>
+          </div>
+          <div class="product-info"><p class="product-category" data-fr="INFORMATIQUE · DÉMO" data-ar="معلوميات · تجريبي">INFORMATIQUE · DÉMO</p><h3 data-fr="Ordinateur portable" data-ar="حاسوب محمول">Ordinateur portable</h3><div class="product-bottom"><span class="product-price">3500 DH</span><a class="product-link product-page-link" href="product.html?id=demo-laptop&amp;lang=fr" data-label-fr="Détails" data-label-ar="التفاصيل">Détails <span aria-hidden="true">↗</span></a></div></div>
+        </article>
+
+        <article class="product-card" data-product-id="local-88e2f73f-aa96-4bef-b58b-05ac8b1a1a6d" data-default-price="180" data-category="computing" data-search-fr="rj45 connecteur réseau informatique" data-search-ar="آر جيه 45 موصل شبكة معلوميات" data-description-fr="Connecteur RJ45. Description à compléter." data-description-ar="موصل RJ45. الوصف قيد الإضافة.">
+          <div class="product-image image-blue"><a class="product-image-link" data-product-link href="product.html?id=local-88e2f73f-aa96-4bef-b58b-05ac8b1a1a6d&amp;lang=fr" aria-label="Voir les détails de RJ45"><span class="product-image-placeholder" aria-hidden="true">RJ</span></a></div>
+          <div class="product-info"><p class="product-category" data-fr="INFORMATIQUE" data-ar="المعلوميات">INFORMATIQUE</p><h3 data-fr="RJ45" data-ar="RJ45">RJ45</h3><div class="product-bottom"><span class="product-price">180 DH</span><a class="product-link product-page-link" href="product.html?id=local-88e2f73f-aa96-4bef-b58b-05ac8b1a1a6d&amp;lang=fr" data-label-fr="Détails" data-label-ar="التفاصيل">Détails <span aria-hidden="true">↗</span></a></div></div>
+        </article>
+      </div>
+      <p class="empty-state" id="empty-state" hidden data-fr="Aucun article ne correspond à cette recherche." data-ar="لا توجد منتجات مطابقة لهذا البحث.">Aucun article ne correspond à cette recherche.</p>
+    </section>
+
+    <section class="contact-band" id="contact">
+      <div class="contact-band-inner">
+        <div><p class="eyebrow" data-fr="INFO ESSOUSSI · MAROC" data-ar="إنفو السوسي · المغرب">INFO ESSOUSSI · MAROC</p><h2 data-fr="Un produit vous intéresse ?" data-ar="هل يهمكم أحد المنتجات؟">Un produit vous intéresse ?</h2><p data-fr="Contactez-nous sur WhatsApp pour toute demande. Disponibilités à confirmer." data-ar="تواصلوا معنا عبر واتساب لأي استفسار حول التوفر.">Contactez-nous sur WhatsApp pour toute demande. Disponibilités à confirmer.</p></div>
+        <span class="contact-mark" aria-hidden="true">IE<span>↗</span></span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="footer-brand" href="#accueil">Info <strong>Essoussi</strong></a><span data-fr="Boutique en ligne · Maroc" data-ar="متجر إلكتروني · المغرب">Boutique en ligne · Maroc</span><span>© <span id="current-year">2026</span> Info Essoussi</span></footer>
+  <a class="whatsapp-float" href="https://wa.me/212665946134" target="_blank" rel="noopener noreferrer" aria-labelledby="whatsapp-label" title="WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20.2 11.6a8.2 8.2 0 0 1-12.1 7.2L3 20l1.3-4.8a8.2 8.2 0 1 1 15.9-3.6Z"></path>
+      <path d="M8.1 7.7c.3-.4.6-.4.9-.3l1 .5c.2.1.3.4.2.6l-.5 1c.5.9 1.2 1.6 2.1 2.1l1-.5c.2-.1.5 0 .6.2l.5 1c.1.3.1.6-.3.9-.5.4-1.1.6-1.6.5-2.5-.6-4.4-2.5-5-5-.1-.4.1-.8.5-1Z"></path>
+    </svg>
+    <span class="visually-hidden" id="whatsapp-label" data-fr="Contacter Info Essoussi sur WhatsApp au 06 65 94 61 34" data-ar="تواصل مع إنفو السوسي عبر واتساب على الرقم 06 65 94 61 34">Contacter Info Essoussi sur WhatsApp au 06 65 94 61 34</span>
+  </a>
+</body>
+</html>
